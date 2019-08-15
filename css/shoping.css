@@ -1,0 +1,107 @@
+nav {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(34, 33, 33);
+  }
+  
+  nav a {
+    
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: bold 13px Georgia, serif;
+  }
+  
+  nav a:hover {
+    background-color: rgb(202, 202, 202);
+    color: black;
+ }
+
+  nav a:nth-child(1) {
+    order: 1;
+ }
+
+ section {
+  display: flex;
+  justify-content: center;  
+ }
+
+ h2, .block div {
+  background: rgb(153, 18, 63);
+ }
+
+.block {
+    flex: 1 1 700px;
+    flex-direction: column;
+    max-width: max-content;
+    color: white;
+    font-family: 'Georgia', 'Times New Roman', 'Times', 'serif';
+    font-size: 20px;
+    padding: 5px;
+    border-style: hidden;
+    margin-bottom: 4em;
+}
+
+ h2 {
+  padding: 15px 15px 0px;
+  font-size: 25px;
+  border-style: solid; 
+  margin-bottom: 0; 
+  border-style: none;
+} 
+
+.total, #table {
+    padding: 15px;
+    border-style: solid; 
+    margin-bottom: 0; 
+    border-style: none;
+}
+.total {
+  color: #a9a9a9;
+}
+
+table {
+  width: 80%;
+  font-size: 20px;
+}
+
+.delete {
+  color: yellow;
+  font-size: 30px;
+}
+
+#form {
+    justify-content: inherit;
+    color: white;
+    padding: 15px;
+    border-style: solid;
+    border-radius: 15px;
+    margin-top: 3em;
+}
+
+.frm-content {
+  margin-top: 25px;
+}
+
+.input-form input {
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.btn-frm {
+  background-color: #f9e2e2;
+  border-radius: 15px;
+  border: 0;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(153, 18, 63);
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
+

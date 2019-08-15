@@ -1,0 +1,18 @@
+nav {
+    overflow: hidden;
+    background-color: rgb(34, 33, 33);
+  }
+  
+  nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font: bold 13px Georgia, serif;
+  }
+  
+  nav a:hover {
+    color: blue;
+    cursor: pointer;
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shoping list</title>
+    <link rel="stylesheet" type="text/css" href="../css/style_11.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/shoping.css">
+</head>
+
+<body>
+<header>
+        <h1>Shopping list</h1>
+</header>
+
+            <nav>
+                    <a href="../index_12.html">Acasa</a>
+                    <a href="../pagini/curiozitati-copy.html">Curiozitati</a>
+                    <a href="../pagini/adresa.html">Adresa</a>
+                    <a href="https://www.facebook.com/jenea.ceban">Profil Facebook</a>
+                    <a href="../pagini/formular-copy.html" target="_blank">Completeaza Formular</a>
+                    <a href="../pagini/drapelu.html">Drapelu Moldovei</a>
+                    <a href="../pagini/joc.html">JOC</a>
+                    <a href="../pagini/shoping-list.html">Shoping List</a>
+                    <a href="../pagini/calculator.html">Calculator</a>
+                    <a href="../pagini/slide_manual.html">Manual Slide</a>
+                    <a href="../pagini/slide.html">Auto Slide</a>
+            </nav>     
+
+<section>
+    <div class="block">
+        <h2>Lista ta de cumparaturi</h2>
+        <div class="total">Cheltueli totale necesare: <span id="total"></span></div>
+        <div id="table"></div>
+        <div id="form" class="frm">
+            <div class="frm-content">
+                <div class="input-form">
+                    <input type="text" id="product" class="input-el" placeholder="Denumire produs"/>
+                    <input type="text" id="nmbr" class="input-el" placeholder="Cantitate produs"/>
+                    <input type="text" id="price" class="input-el" placeholder="Pret unitar"/>
+                </div>
+                <button onclick="addItem();" class="btn-frm">Insereaza produs in lista</button>
+                <p id="err"></p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<footer>
+    <h4 id="demo" align="center"></h4>
+    <script>
+    document.getElementById("demo").innerHTML="&copy Knowledges create your future!"
+    </script>
+</footer>
+
+<script src="../js/shoping-list.js"></script>
+</body>
+</html>
