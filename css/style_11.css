@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  
 body {
   background-color:#f9f3f3;
 }
@@ -29,7 +35,8 @@ nav {
 }
 
 nav a {
-  
+  float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -45,11 +52,6 @@ nav a:hover {
 section {
   padding: 10px;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  }
 
 .column {
   float: left;
@@ -94,7 +96,7 @@ footer {
   background-color: #eeecec;
   padding: 46px;
   text-align: center;
-  margin-top: 25px;
+  margin-top: 55px;
 }
 
 .form{
