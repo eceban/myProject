@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width-device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Calculator</title>
   <link rel="stylesheet" type="text/css" href="../css/style_11.css">
-  <link rel="stylesheet" type="txt/css" href="../css/calculator.css">
+  <link rel="stylesheet" type="text/css" href="../css/calculator.css">
 </head>
 
 <body>
@@ -28,28 +28,34 @@
         </nav>
 
 <section>
-<div class="container">
-  <h2>Insert value, then select the operation...</h2>
-  <div class="buton">
-    <button onclick="operationUser.delValues();">Delete values</button>
-  </div>
-  <div class="input">
-    <label>Left operand <input type="text" placeholder="value 1" onchange="operationUser.validateNumber(this);" id="val1"/></label>
-    <label>Right operand<input type="text" placeholder="value 2" oninput="operationUser.validateNumber(this);" id="val2"/></label>
-  </div>
-  <div class="rez">
-    <input type="text" id="rez" placeholder="result" readonly/>
-  </div>
-  <div class="buton">
-    <button onclick="operationUser.getSum();">Summing</button>
-    <button onclick="operationUser.getProd();">Multiplying</button>
-  </div>
-  <div class="buton">
-    <button onclick="operationUser.getDiff();">difference</button>
-    <button onclick="operationUser.getDiv();">Division</button>
-  </div>
-  <div id="info"></div>
+<div class="content">
+    <h2>Insert the value, then select the operation...</h2>
+
+<div name="calculator" class="block">
+    <input type="textfield" name="ans" value="">
+<div class="numbers">
+    <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+    <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+    <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+    <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+    <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+    <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+    <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+    <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+    <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+    <input type="reset" value="C" class="reset">
+    <input type="button" value="0" onClick="document.calculator.ans.value+='0'">        
+    <input type="button" value="=" class="result" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)" readonly>    
 </div>
+<div class="operators"> 
+    <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+    <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+    <input type="button" value="*" onClick="document.calculator.ans.value+='*'">   
+    <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+</div>
+</div>
+</div>
+</section>
 
 <footer>
     <h4 id="demo" align="center"></h4>

@@ -1,3 +1,291 @@
 section {
-    height: 28em;
+    height: 31em;
+}
+
+.content {    
+    text-align: center;
+}
+
+h2 {
+    padding: 20px;
+    font-size: 25px;
+    color: rgb(78, 74, 74);
+    border-style: none;
+} 
+
+/* Simple styling 
+
+.block {
+    background: rgb(153, 18, 63);
+    border-style: hidden;
+    border-radius: 10px;
+    max-width: 370px;
+    height: 360px;
+    padding: 10px;
+    margin: auto;
+}
+
+input[type="textfield"] {
+    border: none;
+    border-radius: 5px;
+    width: 330px;
+    height: 65px;
+    font-size: 35px;
+    padding: 5px;
+    margin: 10px;
+    margin-bottom: 17px;
+}
+
+.numbers {
+    width: 253px;
+    display: inline-block;
+}
+
+.operators {
+    width: 80px;
+    display: inline-block;
+} */
+
+/* CSS Float 
+
+.numbers {
+    float: left;
+    width: 75%;
+}
+
+.operators {
+    width: 20%;
+    float: left;
+} */
+/*
+input[type="button"],
+input[type="reset"] {
+    border: none;
+    border-radius: 3px;
+    font-size: 30px;
+    width: 75px;
+    height: 55px;
+    padding: 10px;
+    margin: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+   .block {
+        max-width: 270px;
+        height: 465px;
+        padding: 1px;
+        clear: left;
+    }
+
+    input[type="textfield"] {
+        width: 245px;
+        margin-bottom: 10px;
+    }
+
+    .numbers, .operators {
+        width: 251px;
+        margin: 8px;
+    }
+
+    .numbers {
+        position: relative;
+        top: 120px;
+    }
+
+    .operators {
+        position: relative;
+        bottom: 262px;
+    }
+
+    .operators input[type="button"]:nth-child(4) {
+        width: 245px;
+    }
+
+    footer {
+        margin-top: 80px;
+    }
+} */
+
+/* CSS Flexbox 
+
+.block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(153, 18, 63);
+    border-style: hidden;
+    border-radius: 10px;
+    max-width: 370px;
+    height: 360px;
+    padding: 10px;
+    margin: auto;
+}
+
+.block > input[type="textfield"] {
+    border: none;
+    border-radius: 5px;
+    width: 330px;
+    height: 65px;
+    font-size: 35px;
+    padding: 5px;
+    margin: 10px;
+    margin-bottom: 17px;
+}
+
+.numbers {
+    width: 253px;
+}
+
+.operators {
+    width: 80px;
+}
+
+input[type="button"],
+input[type="reset"] {
+    border: none;
+    border-radius: 3px;
+    font-size: 30px;
+    width: 75px;
+    height: 55px;
+    padding: 10px;
+    margin: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+    .block {
+         max-width: 270px;
+         height: 465px;
+         padding: 1px;
+     }
+ 
+     .block > input[type="textfield"] {
+         width: 245px;
+         margin-bottom: 10px;
+     }
+ 
+     .numbers, .operators {
+         width: 251px;
+     }
+ 
+     .block div:nth-child(2) {
+         order: 1;
+     }
+
+     .operators input[type="button"]:nth-child(4) {
+        width: 245px;
+    }
+
+     Footer {
+         margin-top: 80px;
+    }
+}*/
+
+
+/* CSS Grid View */
+
+.block {
+    display: grid;
+    grid: 
+    'input input input input'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators';
+    background-color: rgb(153, 18, 63);
+    border-style: hidden;
+    border-radius: 10px;
+    max-width: 370px;
+    height: 360px;
+    padding: 15px;
+    margin: auto;
+}
+
+.block > input[type="textfield"] {
+    grid-area: input;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 65px;
+    font-size: 35px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.numbers {
+    grid-area: numbers;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding-right: 5px;
+}
+
+.operators {
+    grid-area: operators;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding-left: 5px;
+}
+
+input[type="button"], 
+input[type="reset"] {
+    border: none;
+    border-radius: 3px;
+    font-size: 30px;
+    width: 75px;
+    height: 55px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .block {
+        display: grid;
+        grid: 
+    'input input input'
+    'operators operators operators'
+    'operators operators operators'
+    'numbers numbers numbers'
+    'numbers numbers numbers'
+    'numbers numbers numbers'
+    'numbers numbers numbers';
+    max-width: 270px;
+    height: 465px;
+    padding: 10px;
+}
+
+.block > input[type="textfield"] {
+    grid-area: input;   
+    margin-bottom: 5px;
+}
+
+.operators {
+    grid-area: operators;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.operators input[type="button"]:nth-child(4) {
+    grid-column: 1/ -1;
+    }
+
+.numbers {
+    grid-area: numbers;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    padding-right: 0;
+}
+
+input[type="button"] {
+    width: 100%;
+}
+
+Footer {
+    margin-top: 80px;
+}
 }

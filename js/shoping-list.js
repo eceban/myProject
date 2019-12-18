@@ -8,7 +8,7 @@ var list=[];
         restart();
     }
 function showList(){
-        var rez="<table>", total=0;
+        var rez="<table class>", total=0;
         for(i=0; i<list.length; i++){
             rez+="<tr style='max-width: 30px;'>";
             for(j=0; j<list[i].length; j++){
